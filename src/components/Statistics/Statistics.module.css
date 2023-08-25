@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  color: blue;
+  font-weight: 500;
+  list-style: none;
+}
+
+.positiv {
+  font-size: 32px;
+  font-weight: 650;
+  color: red;
+}

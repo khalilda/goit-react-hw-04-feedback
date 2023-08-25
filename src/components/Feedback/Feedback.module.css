@@ -1,0 +1,85 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .buttons {
+    padding: 10px 20px;
+    width: 140px;
+    height: 47px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+    border: none;
+    border-radius: 10px;
+    background: yellow;
+    transition: all 250ms;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .buttons:focus,
+  .buttons:hover {
+    transform: scale(1.2);
+    font-size: 25px;
+  }
+  
+  .buttons:before {
+    content: '';
+    background: linear-gradient(black);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .buttons:active {
+    color: red;
+    background: transparent;
+  }
+  
+  .buttons:active:after {
+    background: transparent;
+  }
+  
+  .buttons:hover:before {
+    opacity: 1;
+  }
+  
+  .buttons:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    filter: blur(5px);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  } */
+  
