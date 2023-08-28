@@ -12,7 +12,7 @@ export const App = () => {
   const countTotalFeedback = () => {
     const { good, neutral, bad } = stats;
     const objectValues = [good, neutral, bad];
-    return objectValues.reduce((total, value) => total + value, 0);
+    return objectValues(stats).reduce((total, value) => total + value, 0);
   };
 
   const countPositiveFeedbackPercentage = () => {
